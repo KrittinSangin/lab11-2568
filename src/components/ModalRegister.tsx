@@ -216,6 +216,8 @@ export default function ModalRegister() {
                 />
                 <label className="form-check-label">Cap 🧢 (400 THB)</label>
               </div>
+              {(buyBottle&&buyShoes&&buyCap) ? <span className="text-success d-block">(20% Discounted)</span> : ""}
+
             </div>
 
             <div className="alert alert-primary mt-3" role="alert">
@@ -226,7 +228,6 @@ export default function ModalRegister() {
             <div>
               Total Payment : {(computeTotalPayment()).toLocaleString()} THB
               {/* Render below element conditionally when user get 20% discount */}
-              {(buyBottle&&buyShoes&&buyCap) ? <span className="text-success d-block">(20% Discounted)</span> : ""}
               
             </div>
           </div>
